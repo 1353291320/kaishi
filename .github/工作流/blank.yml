@@ -1,0 +1,235 @@
+// 1.cpp : 定义控制台应用程序的入口点。
+//
+
+
+
+
+//int _tmain(int argc, _TCHAR* argv[])
+//{
+//	int arr[80]={0};
+//	printf("%d\n",sizeof (arr)/sizeof(arr[0]));
+//	return 0;
+//}
+//
+
+
+	//字符串的结束标志：‘0’
+	//“abcdef”
+	
+	
+	//‘0’转义字符-0
+	//0数字0
+	//'1''2'数字字符‘a''d'字母字符
+	//'0'->ASCII值48
+	//EOF-end of file-文件结束标志-1
+//int Max(int x,int y)
+//{
+//		if(x>y)
+//			return x;
+//		else
+//			return y;
+//		
+//}
+//int main()
+//{
+//	int num1=10;
+//	int num2=20;
+//	int max=0;
+//
+//	max=Max(num1,num2);
+//	printf("max=%d\n",max);
+//	
+//	
+//	return 0;
+#include "stdafx.h"
+
+
+	////int a=10;
+	////int arr[]={1,2,3,4,5,6};
+	////printf("%d\n",sizeof a);//4
+	////printf("%d\n",sizeof(int));//4
+	////printf("%d\n",sizeof(arr));
+	////printf("%d\n",sizeof(arr)/sizeof(arr[0]));
+	//int a=0;
+	//int b=a;//按位取反
+	////00000000000000000000000000000000
+	////11111111111111111111111111111111
+	////-1
+	////原码：10000000000000000000000000000001
+	////反码：11111111111111111111111111111110
+	////补码：11111111111111111111111111111111
+	//printf("%d\n",b);
+	/*int a =3.14;*/
+	
+//	int a=10;
+//	int b=20;
+//	int max;
+//	max=(a>b?a:b);
+//	/*if(a>b)
+//		max=a;
+//	else
+//		max=b;
+//*/
+//	printf("%d",max);
+
+	//int arr[10]={0,4,4,4,5};
+	//printf("%d",arr[4]);//[]--下标引用操作符
+//	int add(int x,int y)
+//{
+//	int z=0;
+//	z=x+y;
+//	return z;
+//
+//}
+//	int main()
+//{
+//	int a=10;
+//	int b=20;
+// 
+//	printf("%d",add(a,b));
+//
+//
+//
+//
+//
+//	return 0;
+//}
+//int main()
+//{
+//	unsigned int num = 123;
+//	printf("%d",num);
+//
+//	return 0;
+//}
+//int main()
+//{
+//	typedef---类型重定义-类型定义
+//	typedef unsigned int d_int;
+//	
+//	d_int=unsigned
+//
+//	return 0;
+//
+//
+//}
+//void test()
+//{
+//	static int a=1;//a是一个静态的局部变量
+//	a++;
+//	printf("%d\n",a);
+//}
+//int main()
+//{
+//
+//	int i=0;
+//	while(i<5)
+//	{
+//		test();
+//		i++;
+//	}
+//	return 0;
+//}
+//int main()
+//{
+//	
+//
+//	
+//	return 0;
+//
+//}
+//int main()
+//{//extern--声明外部符号的
+//	extern int g_val;
+//	printf("g_val=%d",g_val);
+//
+//	return 0;
+//}
+//1.static修改了局部变量
+//2.static修改了全局变量
+//3.sratic改变了函数的连接属性
+//外部链接属性改成了内部链接属性
+//extern int add(int,int);
+//int main()
+//{
+//	int a=10;
+//	int b=20;
+//	printf("%d",add(a,b));
+//	return 0;
+//}
+//#define 定义的标识符常量
+//#define 可以定义宏-带参数
+//#define MAX(x,y)(x>y?x:y)
+//int Max(int x,int y)
+//{
+//	if(x>y)
+//		return x;
+//	else
+//		return y;
+//}
+//int main()
+//{
+//
+//	int a=10;
+//	int b=20;
+//	int max=Max(a,b);
+//	printf("%d\n",max);
+//	max=MAX(a,b);
+//	printf("%d\n",max);
+//
+//}
+
+	//int a=10;//申请四个字节
+	//int*p=&a;//取地址
+	///*printf("%p\n",&a);*/
+	////有一种变量是用来存放地址的-指针变量
+	////*p=20;	//&a;取地址
+	//printf("%p\n",p);
+	////*解引用操作符
+
+	//int num=10;
+	//int *p;
+	//p=&num;
+	//printf("%p\n",p);
+	//printf("%p",&num);
+	//return 0;
+//int main()
+//{
+//	char ch='w';
+//	char *pc=&ch;
+//	printf("%d\n",sizeof(pc));
+//	return 0;
+//
+//
+//
+//
+//}
+#include <string.h>
+struct book 
+{
+	char name[20];//c语言程序设计
+	short price;//55
+
+};
+
+int main()
+{//利用结构体类型创建一个类型结构以变量
+	struct book b1={"c语言程序设计",55};
+	struct book *pb=&b1;
+	printf("%s\n",pb->name);
+	printf("%d\n",pb->price);
+	//. 结构体变量.成员
+	//->结构体->成员
+	//利用pb打印出我的书名和价格
+
+	/*printf("%s\n",(*pb).name);
+	printf("%d\n",(*pb).price);*/
+	//printf("书名:%s\n",b1.name);
+	//printf("价格:%d元\n",b1.price);
+	//b1.price=15;
+	strcpy_s(b1.name,"c++");
+	printf("修改后的价格=%s\n",b1.name);
+	return 0;
+	
+
+
+}
