@@ -1,0 +1,139 @@
+#include "stdafx.h"
+//#include "string.h"
+//
+//void sushu()//判断是否为素数
+//{
+//	int i,m;
+//	printf("请输入数字\n");
+//	scanf("%d",&m);
+//	
+//	for(i=2;i<=m-1;i++)
+//	{
+//		if(m%i==0)
+//			break;
+//	}
+//	if(i<m)
+//		printf("%d不是素数。\n",m);
+//	else
+//		printf("%d是素数。\n",m);
+//	return;
+//}
+//void zifuchuan()//进行字符串数组的链接
+//{
+//	char str1[50],str2[50];
+//	printf("请输入两个字符串\n");
+//	gets(str1);
+//	gets(str2);
+//	strcat(str1,str2);
+//	printf("最后的字符串为%s\n",str1);
+//	
+//}
+//void oushu()//判断是否为偶数
+//{
+//	int a;
+//	printf("请输入数字\n");
+//	scanf("%d",&a);
+//	if(a%2==0)
+//		printf("%d是偶数",a);
+//	else
+//		printf("%d不是偶数",a);
+//
+//
+//}
+//void runnian()//
+//{
+//	int m;
+//	printf("请输入年份：\n");
+//	scanf("%d",&m);
+//	if((m/4==0)&&(m/100!=0)||(m/400==0))
+//		printf("%d是闰年",m);
+//}
+//int main()
+//{
+//	int number;
+//	printf("进行字符数组链接请输入1，判断是否是素数请输入2，判断是否是偶数请输入3，判断书否是闰年请输入4,结束请输入5。\n");
+//	scanf("%d",&number);
+//	if(number==1)
+//	{
+//		zifuchuan();
+//	}
+//	else
+//		if(number==2)
+//		{
+//			sushu();
+//		}
+//		else
+//			if(number==3)
+//			{
+//				oushu();
+//			}
+//			else
+//				if(number==4)
+//				{
+//					runnian();
+//				}
+//				else
+//					if(number==5)
+//						printf("结束程序。");
+//	return 0;
+//}
+//int huanzhi(int *a,int *b)
+//{
+//	int t;
+//	t=0;
+//	t=*a;
+//	*a=*b;
+//	*b=t;
+//	return *a,*b;
+//}
+//int main()
+//{
+//	int a,b;
+//	printf("请输入两个整数：\n");
+//	scanf("%d,%d",&a,&b);
+//	huanzhi(&a,&b);
+//	printf("%d,%d\n",a,b);
+//	return 0;
+//}
+//int main()
+//{
+//	static int i;
+//	int a[10]={1,2,3,4,5,6,7,8,9,10},b;
+//	printf("请输入一个整数：\n");
+//	scanf("%d",&b);
+//	for(i=0;i<10;i++)
+//		{
+//			if(b==a[i])
+//			{	
+//				printf("Found\n");
+//				printf("是第%d个元素\n",i+1);
+//				break;
+//			}
+//			
+//			if(i==9)
+//				printf("Not founf");
+//		}
+//
+//			
+//	return 0;
+//}
+int factorial(int n)
+{
+	int a;
+	a=0;
+	if(0==n)
+		return 1;
+	else
+		return n*factorial(n-1);
+		
+}
+int main()
+{
+	int n,m;
+	m=0;
+	printf("请输入n的值\n");
+	scanf("%d",&n);
+	m=factorial(n);
+	printf("n的阶乘为%d",m);
+	return 0;
+}
