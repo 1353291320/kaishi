@@ -1,0 +1,35 @@
+
+#include "stdafx.h"
+#include "math.h"
+long func(int, int);
+long  funAdd(int,int);
+int main()
+{
+	int  a,b;
+	long c,d;
+	printf("请输入两个数：\n");
+	scanf("%d%d",&a,&b);
+	c=funAdd(a,b);
+	d=func(a,b);
+	printf("%ld\n%ld",c,d);
+	return 0;
+}
+
+long  func(int x,int y)
+{
+	long fun,i;
+	if(y>1)
+		fun=x*pow(10,(double)y-1)+func(x,(double)y-1);
+	else if(y==1)
+		fun=x;
+	return fun;	
+}
+long funAdd(int x,int y)
+{
+	long i,sums;
+	if(y==1)
+		sums=x;
+	else
+		sums=func(x,y)+funAdd(x,(double)y-1);
+	return sums;
+}
