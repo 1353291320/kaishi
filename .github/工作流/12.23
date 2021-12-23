@@ -1,0 +1,15 @@
+
+#include "stdafx.h"
+int main()
+{
+	int a;
+	int *p;
+	int **fp;
+	a=1;
+	p=&a;
+	fp=&p;
+	printf("a的值：%d;a的地址：%p\n",a,&a);
+	printf("p的值：%p;的地址：%p;p指向的变量：%d\n",p,&p,*p);
+	printf("fp的值：%p;fp的地址：%p;fp指向的指变量：%p;*fp指向的变量：%d\n",fp,&fp,*fp,**fp);
+	return 0;
+}
