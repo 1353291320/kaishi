@@ -1,0 +1,19 @@
+#include "stdafx.h"
+int main()
+{
+	enum week{Mon=1,Tues,Wed,Thurs,Fri,Sat,Sun};
+	enum week day;
+	scanf("%d",&day);
+	switch(day)
+	{
+	case Mon:puts("Monday");break;
+	case Tues:puts("Tuesday");break;
+	case Wed:puts("Wednesday");break;
+	case Thurs:puts("Thursdaty");break;
+	case Fri:puts("Friday");break;
+	case Sat:puts("Saturday");break;
+	case Sun:puts("Sunday");break;
+	default:puts("Error!");break;
+	}
+	return 0;
+}
